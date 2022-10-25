@@ -1,6 +1,6 @@
-# Vue 3 + Vite
+# Portfolio page
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A portfolio page to show on a tv screen outside of our office. Vue 3 was used with Vite to build a lightweight web application. CSS was done without frameworks (Bootstrap, Tailwind etc) to keep the amount of data as low as possible.
 
 ## Recommended IDE Setup
 
