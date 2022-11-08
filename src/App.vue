@@ -15,6 +15,9 @@
         <li class="placeholder">Placeholder</li>
       </ul>
     </div>
+    <div class="row fixed-bottom" style="padding: 0 .5rem;">
+      <h2>*BISS is like the A-team, but with professors from Maastricht University</h2>
+    </div>
   </div>
 </template>
 
