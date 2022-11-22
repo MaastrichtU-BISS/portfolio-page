@@ -32,10 +32,10 @@ import InnerModal from "./components/InnerModal.vue"
 import {onMounted} from 'vue';
 
 onMounted(()=>{
-  // { color: 'red' }
-  $("#card-au2s").animatedModal();
-  $("#card-proj-ov").animatedModal();
-  $("#card-txt2img").animatedModal();
+  const options = { color: '#009EE3'};
+  $("#card-au2s").animatedModal(options);
+  $("#card-proj-ov").animatedModal(options);
+  $("#card-txt2img").animatedModal(options);
 })
 
 </script>

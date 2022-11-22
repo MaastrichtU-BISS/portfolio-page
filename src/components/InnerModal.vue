@@ -4,7 +4,7 @@
             <div class="close-container">
               <div class="leftright"></div>
               <div class="rightleft"></div>
-              <label class="close">close</label>
+              <!-- <label class="close">close</label> -->
             </div>
           </div>
         <div class="modal-content">
@@ -18,6 +18,6 @@
 <style>
  iframe {
   width: 100%;
-  height: auto;
+  height: calc(100vh - 72px);
  }
 </style>
