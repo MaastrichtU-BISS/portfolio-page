@@ -18,6 +18,10 @@
 <style>
  iframe {
   width: 100%;
-  height: calc(100vh - 72px);
+  height: 100%
+ }
+
+ .modal-content {
+  height: calc(100vh - 70px);
  }
 </style>
