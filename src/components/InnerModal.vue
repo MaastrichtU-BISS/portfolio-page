@@ -4,7 +4,7 @@
             <div class="close-container">
               <!-- <div class="leftright"></div>
               <div class="rightleft"></div> -->
-              <label class="">Home</label>
+              <label @click="$emit('reload')" class="">Home</label>
             </div>
           </div>
         <div class="modal-content">

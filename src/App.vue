@@ -18,9 +18,9 @@
       <h2>*BISS is like the A-team, but with professors from Maastricht University</h2>
     </div>
     <div>
-      <InnerModal :id="'au2s'" :url="'http://localhost:3001'"/>
-      <InnerModal :id="'proj-ov'" :url="'http://localhost:3000'"/>
-      <InnerModal :id="'txt2img'" :url="'http://localhost:3002'"/>
+      <InnerModal @reload="reloadAudio2semantics" :id="'au2s'" :url="audio2semantics"/>
+      <InnerModal @reload="reloadProjectOverview" :id="'proj-ov'" :url="projectOverview"/>
+      <InnerModal @reload="reloadText2image" :id="'txt2img'" :url="text2image"/>
     </div>
   </div>
 </template>
@@ -29,7 +29,7 @@
 import Title from "./components/Title.vue";
 import Card from "./components/Card.vue"
 import InnerModal from "./components/InnerModal.vue"
-import {onMounted} from 'vue';
+import { onMounted, ref } from 'vue';
 
 onMounted(()=>{
   const options = { color: '#009EE3'};
@@ -37,6 +37,31 @@ onMounted(()=>{
   $("#card-proj-ov").animatedModal(options);
   $("#card-txt2img").animatedModal(options);
 })
+
+const audio2semantics = ref('http://localhost:3001');
+const projectOverview = ref('http://localhost:3000');
+const text2image = ref('http://localhost:3002');
+
+async function reloadAudio2semantics() {
+  const url = audio2semantics.value;
+  audio2semantics.value = '';
+  await new Promise((res) => setTimeout(res, 1 * 1000));
+  audio2semantics.value = url;
+}
+
+async function reloadProjectOverview() {
+  const url = projectOverview.value;
+  projectOverview.value = '';
+  await new Promise((res) => setTimeout(res, 1 * 1000));
+  projectOverview.value = url;
+}
+
+async function reloadText2image() {
+  const url = text2image.value;
+  text2image.value = '';
+  await new Promise((res) => setTimeout(res, 1 * 1000));
+  text2image.value = url;
+}
 
 </script>
 <style>
