@@ -2,9 +2,9 @@
     <div :id="id">
         <div :class="'close-' + id"> 
             <div class="close-container">
-              <div class="leftright"></div>
-              <div class="rightleft"></div>
-              <!-- <label class="close">close</label> -->
+              <!-- <div class="leftright"></div>
+              <div class="rightleft"></div> -->
+              <label class="">Home</label>
             </div>
           </div>
         <div class="modal-content">
