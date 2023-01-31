@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="cards-list">
-        <Card :id="'card-au2s'" :title="'Help een robot geluiden herkennen'" :url="'#au2s'" :img_url="'/src/assets/img/au2sem.gif'"/>
+        <Card :id="'card-au2s'" :title="'Geluiden herkennen'" :url="'#au2s'" :img_url="'/src/assets/img/au2sem.gif'"/>
         <Card :id="'card-proj-ov'" :title="'Bekijk onze projecten'" :url="'#proj-ov'" :img_url="'/src/assets/img/projects.gif'"/>
         <Card :id="'card-txt2img'" :title="'Maak kunst met Kunstmatige intelligentie'" :url="'#txt2img'" :img_url="'/src/assets/img/dalle.gif'"/>
       </div>
