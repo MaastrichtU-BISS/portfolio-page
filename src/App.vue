@@ -9,9 +9,9 @@
     </div>
     <div class="row">
       <div class="cards-list">
-        <Card :id="'card-au2s'" :title="'Audio to Semantics'" :url="'#au2s'" :img_url="'/src/assets/img/au2sem.gif'"/>
-        <Card :id="'card-proj-ov'" :title="'Our Projects'" :url="'#proj-ov'" :img_url="'/src/assets/img/projects.gif'"/>
-        <Card :id="'card-txt2img'" :title="'Text to Images'" :url="'#txt2img'" :img_url="'/src/assets/img/dalle.gif'"/>
+        <Card :id="'card-au2s'" :title="'Help een robot geluiden herkennen'" :url="'#au2s'" :img_url="'/src/assets/img/au2sem.gif'"/>
+        <Card :id="'card-proj-ov'" :title="'Bekijk onze projecten'" :url="'#proj-ov'" :img_url="'/src/assets/img/projects.gif'"/>
+        <Card :id="'card-txt2img'" :title="'Maak AI kunst'" :url="'#txt2img'" :img_url="'/src/assets/img/dalle.gif'"/>
       </div>
     </div>
     <div class="row fixed-bottom" style="padding: 0 .5rem;">
