@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="row fixed-bottom" style="padding: 0 .5rem;">
-      <h2>*BISS is like the A-team, but with professors from Maastricht University</h2>
+      <h2>*BISS is net het A-team, maar met professoren van de Universiteit Maastricht</h2>
     </div>
     <div>
       <InnerModal @reload="reloadAudio2semantics" :id="'au2s'" :url="audio2semantics"/>
