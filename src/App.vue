@@ -11,14 +11,14 @@
       <div class="cards-list">
         <Card
           :id="'card-au2s'"
-          :title="'Audio to Semantics'"
+          :title="'Geluiden herkennen'"
           :url="'#au2s'"
           :img_url="'/src/assets/img/au2sem.gif'"
           @click="stopTimer()"
         />
         <Card
           :id="'card-proj-ov'"
-          :title="'Our Projects'"
+          :title="'Bekijk onze projecten'"
           :url="'#proj-ov'"
           :img_url="'/src/assets/img/projects.gif'"
           @click="stopTimer()"
@@ -26,7 +26,7 @@
         />
         <Card
           :id="'card-txt2img'"
-          :title="'Text to Images'"
+          :title="'Maak kunst met Kunstmatige intelligentie'"
           :url="'#txt2img'"
           :img_url="'/src/assets/img/dalle.gif'"
           @click="stopTimer()"
@@ -35,7 +35,7 @@
     </div>
     <div class="row fixed-bottom" style="padding: 0 0.5rem">
       <h2>
-        *BISS is like the A-team, but with professors from Maastricht University
+        *BISS is net het A-team, maar dan met professoren van de Universiteit Maastricht
       </h2>
     </div>
     <div>

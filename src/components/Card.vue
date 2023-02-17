@@ -9,3 +9,9 @@
 <script setup>
   const props = defineProps(["id", "url", "img_url", "title"]);
 </script>
+
+<style scoped>
+.card_title {
+    height: 130px;
+}
+</style>
