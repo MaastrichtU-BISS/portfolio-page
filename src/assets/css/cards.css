@@ -48,6 +48,7 @@
     /* border-top: none; */
     outline: none;
     box-shadow: 14px 10px 20px -7px rgba(0, 0, 0, 0.60);
+
   }
   .card:active {
     transform: scale(0.80);
@@ -76,7 +77,25 @@
     text-decoration: none;
 }
 
-
+.press{
+  transform-origin: center;
+  transition: all ease-in-out;
+  animation: pressing 3s infinite alternate 100ms;
+ } 
+ @keyframes pressing {
+   0% ,30%{
+     transform: scale(1);
+    }
+    40% ,100%{
+     transform: scale(0.9);
+    }
+    from{
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(209, 238, 147), 0 0 30px #0ff, 0 0 40px #caa914, 0 0 50px #e60073, 0 0 60px #e60073;
+    }
+    to{
+      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 10px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6;
+    }
+ }
 
 @-webkit-keyframes glowing {
   from {

@@ -184,3 +184,30 @@ h2 {
   position: fixed;
   bottom: 0;
 }
+.pointing{
+  position: relative;
+  height: auto;
+  top: 0px;
+  bottom: 0;
+  left: 0%;
+  opacity: 0;
+  /* transform: scale(0); */
+  right: 0;
+  width: 100px;
+  transition: all ease-in-out;
+  animation: pointing 3s infinite alternate;
+}
+
+@keyframes pointing {
+   0% ,30%{
+    top: 90px;
+    left: 50%;
+    opacity: 0;
+   }
+   40% ,100%{
+    top: 35px;
+    left: 50%;
+    opacity: 0.9;
+   }
+  
+}
