@@ -1,5 +1,5 @@
 <template>
-  <h1></h1>
+  <h1 class="title-type"></h1>
 </template>
 
 <style scoped lang="scss">
