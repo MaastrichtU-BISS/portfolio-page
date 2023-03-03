@@ -8,6 +8,7 @@
 </template>
 <script setup>
 const props = defineProps(["id", "url", "img_url", "title"]);
+
 </script>
 
 <style scoped>

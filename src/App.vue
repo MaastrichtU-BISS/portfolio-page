@@ -14,14 +14,14 @@
           :title="'Geluiden herkennen'"
           :url="'#au2s'"
           :img_url="'/src/assets/img/au2sem.gif'"
-          @click="stopTimer()"
+          @click="stopModalTimer()"
         />
         <Card
           :id="'card-proj-ov'"
           :title="'Bekijk onze projecten'"
           :url="'#proj-ov'"
           :img_url="'/src/assets/img/projects.gif'"
-          @click="stopTimer()"
+          @click="stopModalTimer()"
           :class="{ press: isPressing }"
         />
         <Card
@@ -29,7 +29,7 @@
           :title="'Maak kunst met Kunstmatige intelligentie'"
           :url="'#txt2img'"
           :img_url="'/src/assets/img/dalle.gif'"
-          @click="stopTimer()"
+          @click="stopModalTimer()"
         />
       </div>
     </div>
@@ -51,6 +51,7 @@
       />
       <InnerModal
         @reload="reloadText2image"
+     
         :id="'txt2img'"
         :url="text2image"
       />
@@ -74,7 +75,7 @@ import Title from "./components/Title.vue";
 import Card from "./components/Card.vue";
 import InnerModal from "./components/InnerModal.vue";
 import { onMounted, ref, computed } from "vue";
-
+const props = defineProps(["id", "url"]);
 onMounted(() => {
   const options = { color: "#009EE3" };
   $("#card-au2s").animatedModal(options);
@@ -88,21 +89,22 @@ const projectOverview = ref("http://localhost:3000");
 const text2image = ref("http://localhost:3002");
 let timeOut;
 const countDown = ref(240);
+let modalDown;
+const countColseModal = ref(10);
 
-const isPressing = computed(() => {
-  return countDown.value <= 120;
-});
 
 async function reloadAudio2semantics() {
   const url = audio2semantics.value;
   audio2semantics.value = "";
   await new Promise((res) => setTimeout(res, 1 * 1000));
+  
   audio2semantics.value = url;
   countDown.value = 240;
   startTimer();
 }
 
 async function reloadProjectOverview() {
+  stopModalCount()
   const url = projectOverview.value;
   projectOverview.value = "";
   await new Promise((res) => setTimeout(res, 1 * 1000));
@@ -112,6 +114,7 @@ async function reloadProjectOverview() {
 }
 
 async function reloadText2image() {
+  stopModalCount()
   const url = text2image.value;
   text2image.value = "";
   await new Promise((res) => setTimeout(res, 1 * 1000));
@@ -121,17 +124,15 @@ async function reloadText2image() {
 }
 
 function startTimer() {
+  stopModalCount()
   const timeDown = () => {
     // console.clear();
     if (countDown.value > 0) {
-      console.log("seconds", countDown.value);
+      // console.log("seconds", countDown.value);
 
       timeOut = setTimeout(timeDown, 1000);
     }
     countDown.value--;
-    // if(countDown.value <= 120){
-    //   isPressing.value = true;
-    // }
     if (countDown.value <= 0) {
       countDown.value = 240;
     }
@@ -139,8 +140,24 @@ function startTimer() {
   setTimeout(timeDown, 1000);
 }
 
-function stopTimer() {
+function stopModalTimer() {
   clearTimeout(timeOut);
-  return;
+  const modalColse = () => {
+    if (countColseModal.value > 0){
+      console.log("Close the modal after ", countColseModal.value);
+      modalDown = setTimeout(modalColse, 1000)
+    }
+    else {
+      location.reload();
+    }
+    countColseModal.value--;
+   
+  };
+  setTimeout(modalColse, 1000)
+
+}
+function stopModalCount(){
+  clearTimeout(modalDown);
+  countColseModal.value = 10;
 }
 </script>

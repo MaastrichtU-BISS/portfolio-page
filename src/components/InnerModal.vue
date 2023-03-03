@@ -4,7 +4,8 @@
             <div class="close-container">
               <!-- <div class="leftright"></div>
               <div class="rightleft"></div> -->
-              <label @click="$emit('reload')" class="">Home</label>
+              <label id="kkk"  @click="$emit('reload')" class="">Home</label>
+              <!-- @click="$emit('reload')" -->
             </div>
           </div>
         <div class="modal-content">
@@ -14,6 +15,8 @@
 </template>
 <script setup>
   const props = defineProps(["id", "url"]);
+  import {  ref, defineEmits } from "vue";
+
 </script>
 <style>
  iframe {
