@@ -35,7 +35,8 @@
     </div>
     <div class="row fixed-bottom" style="padding: 0 0.5rem">
       <h2>
-        *BISS is net het A-team, maar dan met professoren van de Universiteit Maastricht
+        *BISS is net het A-team, maar dan met professoren van de Universiteit
+        Maastricht
       </h2>
     </div>
     <div>
@@ -51,7 +52,6 @@
       />
       <InnerModal
         @reload="reloadText2image"
-     
         :id="'txt2img'"
         :url="text2image"
       />
@@ -88,16 +88,18 @@ const audio2semantics = ref("http://localhost:3001");
 const projectOverview = ref("http://localhost:3000");
 const text2image = ref("http://localhost:3002");
 let timeOut;
-const countDown = ref(240);
+const countDown = ref(140);
 let modalDown;
 const countColseModal = ref(10);
-
+	const isPressing = computed(() => {
+  return countDown.value <= 120;
+})
 
 async function reloadAudio2semantics() {
   const url = audio2semantics.value;
   audio2semantics.value = "";
   await new Promise((res) => setTimeout(res, 1 * 1000));
-  
+
   audio2semantics.value = url;
   countDown.value = 240;
   startTimer();
@@ -128,7 +130,7 @@ function startTimer() {
   const timeDown = () => {
     // console.clear();
     if (countDown.value > 0) {
-      // console.log("seconds", countDown.value);
+      console.log("seconds", countDown.value);
 
       timeOut = setTimeout(timeDown, 1000);
     }
@@ -151,7 +153,7 @@ function stopModalTimer() {
       location.reload();
     }
     countColseModal.value--;
-   
+
   };
   setTimeout(modalColse, 1000)
 

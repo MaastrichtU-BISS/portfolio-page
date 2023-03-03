@@ -4,7 +4,7 @@
             <div class="close-container">
               <!-- <div class="leftright"></div>
               <div class="rightleft"></div> -->
-              <label id="kkk"  @click="$emit('reload')" class="">Home</label>
+              <label  @click="$emit('reload')" class="">Home</label>
               <!-- @click="$emit('reload')" -->
             </div>
           </div>
