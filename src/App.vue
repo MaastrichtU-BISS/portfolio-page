@@ -90,10 +90,10 @@ const text2image = ref("http://localhost:3002");
 let timeOut;
 const countDown = ref(240);
 let modalDown;
-const countColseModal = ref(10);
-	const isPressing = computed(() => {
+const countColseModal = ref(30 * 60);
+const isPressing = computed(() => {
   return countDown.value <= 120;
-})
+});
 
 async function reloadAudio2semantics() {
   const url = audio2semantics.value;
@@ -106,7 +106,7 @@ async function reloadAudio2semantics() {
 }
 
 async function reloadProjectOverview() {
-  stopModalCount()
+  stopModalCount();
   const url = projectOverview.value;
   projectOverview.value = "";
   await new Promise((res) => setTimeout(res, 1 * 1000));
@@ -116,7 +116,7 @@ async function reloadProjectOverview() {
 }
 
 async function reloadText2image() {
-  stopModalCount()
+  stopModalCount();
   const url = text2image.value;
   text2image.value = "";
   await new Promise((res) => setTimeout(res, 1 * 1000));
@@ -126,7 +126,7 @@ async function reloadText2image() {
 }
 
 function startTimer() {
-  stopModalCount()
+  stopModalCount();
   const timeDown = () => {
     // console.clear();
     if (countDown.value > 0) {
@@ -145,21 +145,18 @@ function startTimer() {
 function stopModalTimer() {
   clearTimeout(timeOut);
   const modalColse = () => {
-    if (countColseModal.value > 0){
-      console.log("Close the modal after ", countColseModal.value);
-      modalDown = setTimeout(modalColse, 1000)
-    }
-    else {
+    if (countColseModal.value > 0) {
+      // console.log("Close the modal after ", countColseModal.value);
+      modalDown = setTimeout(modalColse, 1000);
+    } else {
       location.reload();
     }
     countColseModal.value--;
-
   };
-  setTimeout(modalColse, 1000)
-
+  setTimeout(modalColse, 1000);
 }
-function stopModalCount(){
+function stopModalCount() {
   clearTimeout(modalDown);
-  countColseModal.value = 10;
+  countColseModal.value = 30 * 60;
 }
 </script>
