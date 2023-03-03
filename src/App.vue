@@ -88,7 +88,7 @@ const audio2semantics = ref("http://localhost:3001");
 const projectOverview = ref("http://localhost:3000");
 const text2image = ref("http://localhost:3002");
 let timeOut;
-const countDown = ref(140);
+const countDown = ref(240);
 let modalDown;
 const countColseModal = ref(10);
 	const isPressing = computed(() => {
