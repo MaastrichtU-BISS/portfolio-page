@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(315deg, #005CA9, #009EE3);
+  background: linear-gradient(315deg, #005ca9, #009ee3);
   background-size: 400% 400%;
 
   /* https://www.gradient-animator.com/ */
@@ -12,26 +12,52 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 }
-
+.footer_txt::selection {
+  display: none;
+}
 @-webkit-keyframes ShiftingGradient {
-  0%{background-position:0% 0%}
-  50%{background-position:100% 100%}
-  100%{background-position:0% 0%}
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 @-moz-keyframes ShiftingGradient {
-  0%{background-position:0% 0%}
-  50%{background-position:100% 100%}
-  100%{background-position:0% 0%}
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 @-o-keyframes ShiftingGradient {
-  0%{background-position:0% 0%}
-  50%{background-position:100% 100%}
-  100%{background-position:0% 0%}
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 @keyframes ShiftingGradient {
-  0%{background-position:0% 0%}
-  50%{background-position:100% 100%}
-  100%{background-position:0% 0%}
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .row {
@@ -50,7 +76,46 @@ body {
 }
 
 #biss-logo {
-  height: 20vmin;
+  height: 15vmin;
+  align-self: flex-end;
+  /* margin: 2rem; */
+}
+.nieuws {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "BISS", serif;
+  font-weight: 600;
+  font-size: 18px;
+  width: 100%;
+  top: 50px;
+  bottom: 0;
+  height: 200px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 5rem;
+  color: #005ca9;
+
+}
+.text-container {
+  width: 60%;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  transition: all 20ms ease;
+  z-index: 1;
+  animation: scrollText 60s linear infinite 200ms;
+}
+@keyframes scrollText {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }
 @media only screen and (min-width: 2560px) {
   #biss-logo {
@@ -68,7 +133,8 @@ body {
   }
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #fff;
   font-family: "BISS", serif;
 }
@@ -100,7 +166,7 @@ h2 {
     font-size: 1.5rem;
   }
 }
-@media only screen and  (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   h1 {
     font-size: 5rem;
   }
@@ -135,26 +201,22 @@ h2 {
 
 @font-face {
   font-family: "BISS";
-  src:  url("./assets/fonts/BISS-Book.ttf") format("truetype"),
-        url("./assets/fonts/BISS-Book.woff") format("woff");
+  src: url("./assets/fonts/BISS-Book.ttf") format("truetype"), url("./assets/fonts/BISS-Book.woff") format("woff");
   font-weight: 300;
 }
 @font-face {
   font-family: "BISS";
-  src:  url("./assets/fonts/BISS-Medium.ttf") format("truetype"),
-        url("./assets/fonts/BISS-Medium.woff") format("woff");
+  src: url("./assets/fonts/BISS-Medium.ttf") format("truetype"), url("./assets/fonts/BISS-Medium.woff") format("woff");
   font-weight: normal;
 }
 @font-face {
   font-family: "BISS";
-  src:  url("./assets/fonts/BISS-Bold.ttf") format("truetype"),
-        url("./assets/fonts/BISS-Bold.woff") format("woff");
+  src: url("./assets/fonts/BISS-Bold.ttf") format("truetype"), url("./assets/fonts/BISS-Bold.woff") format("woff");
   font-weight: 700;
 }
 @font-face {
   font-family: "BISS";
-  src:  url("./assets/fonts/BISS-Black.ttf") format("truetype"),
-        url("./assets/fonts/BISS-Black.woff") format("woff");
+  src: url("./assets/fonts/BISS-Black.ttf") format("truetype"), url("./assets/fonts/BISS-Black.woff") format("woff");
   font-weight: 900;
 }
 
@@ -185,7 +247,7 @@ h2 {
   position: fixed;
   bottom: 0;
 }
-.pointing{
+.pointing {
   position: relative;
   height: auto;
   top: 0px;
@@ -198,17 +260,17 @@ h2 {
   transition: all ease-in-out;
   animation: pointing 3s infinite alternate;
 }
-
 @keyframes pointing {
-   0% ,30%{
+  0%,
+  30% {
     top: 90px;
     left: 50%;
     opacity: 0;
-   }
-   40% ,100%{
+  }
+  40%,
+  100% {
     top: 35px;
     left: 50%;
     opacity: 0.9;
-   }
-  
+  }
 }

@@ -4,8 +4,32 @@
       <img src="./assets/img/biss_um_logo.png" id="biss-logo" />
       <img src="./assets/img/hexagon.png" class="hexagon" />
     </div>
-    <div class="row">
-      <Title />
+    <div class="nieuws">
+      <div class="text-container">
+        <p>
+          Wil jij weten hoe je data voor jouw organisatie kunt laten werken? Heb
+          je een idee voor een nieuwe toepassing? Wil je weten wat BISS precies
+          doet? Schrijf je dan in voor een spreekuur!
+        </p>
+        <p>
+          Brightlands Institute for Smart Society (BISS) is een
+          onderzoeksinstituut van de Universiteit Maastricht. BISS helpt
+          organisaties met innovatieve verantwoorde oplossingen voor data
+          vraagstukken. Bij BISS benaderen we data vraagstukken vanuit een multi
+          disciplinaire aanpak. Wil je hier meer over weten? Of heb je een
+          concrete vraag? Ga dan in gesprek met onze onderzoekers tijdens het
+          spreekuur op vrijdagen in het BISS kantoor (online is natuurlijk ook
+          mogelijk) op de campus in Heerlen.
+        </p>
+        <p>
+          Wat? Spreekuur met een onderzoeker van BISS over datascience en
+          Artificial Intelligence Voor wie? Iedereen die meer wil weten of
+          datascience en de BISS aanpak Wanneer? Op vrijdagen live op de
+          Brightlands Smart Services Campus in Heerlen of online Hoe? Loop
+          binnen tussen 11 en 12 uur op vrijdagen
+        </p>
+      </div>
+      <!-- <Title /> -->
     </div>
     <div class="row">
       <div class="cards-list">
@@ -34,8 +58,8 @@
       </div>
     </div>
     <div class="row fixed-bottom" style="padding: 0 0.5rem">
-      <h2>
-        *BISS is net het A-team, maar dan met professoren van de Universiteit
+      <h2 class="footer_txt">
+        BISS is net het A-team, maar dan met professoren van de Universiteit
         Maastricht
       </h2>
     </div>
