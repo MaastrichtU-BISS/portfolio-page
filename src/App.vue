@@ -59,26 +59,17 @@
     </div>
     <div class="row fixed-bottom" style="padding: 0 0.5rem">
       <h2 class="footer_txt">
-        BISS is net het A-team, maar dan met professoren van de Universiteit
-        Maastricht
+        BISS is net het A-team, maar dan met professoren van de Universiteit Maastricht
       </h2>
     </div>
     <div>
-      <InnerModal
-        @reload="reloadAudio2semantics"
-        :id="'au2s'"
-        :url="audio2semantics"
-      />
+      <InnerModal @reload="reloadAudio2semantics" :id="'au2s'" :url="audio2semantics" />
       <InnerModal
         @reload="reloadProjectOverview"
         :id="'proj-ov'"
         :url="projectOverview"
       />
-      <InnerModal
-        @reload="reloadText2image"
-        :id="'txt2img'"
-        :url="text2image"
-      />
+      <InnerModal @reload="reloadText2image" :id="'txt2img'" :url="text2image" />
     </div>
     <img
       src="./components/icons/hand_pointing.svg"
