@@ -100,13 +100,9 @@ body {
 }
 .text-container {
   width: 60%;
-  padding: 1rem;
-  border-radius: 5px;
   position: relative;
   z-index: 1;
-  height: 100%;
   transition: all 20ms ease;
-  z-index: 1;
   animation: scrollText 60s linear infinite 200ms;
 }
 @keyframes scrollText {
