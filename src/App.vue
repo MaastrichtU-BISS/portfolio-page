@@ -4,7 +4,7 @@
       <img src="./assets/img/biss_um_logo.png" id="biss-logo" />
       <img src="./assets/img/hexagon.png" class="hexagon" />
     </div>
-    <div class="nieuws">
+    <div class="news">
       <div class="text-container">
         <p>
           Wil jij weten hoe je data voor jouw organisatie kunt laten werken? Heb je een

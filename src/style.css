@@ -80,7 +80,7 @@ body {
   align-self: flex-end;
   /* margin: 2rem; */
 }
-.nieuws {
+.news {
   position: relative;
   display: flex;
   justify-content: center;
