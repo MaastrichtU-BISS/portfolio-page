@@ -120,20 +120,19 @@ body {
 }
 .topNews{
   top: 20px;
-  font-size: 25px;
+  font-size: 2rem;
 }
 .topNews-title{
   position: relative;
   z-index: 1;
-  transition: all 20ms ease;
-  animation: scrollNewsText 60s linear infinite 200ms;
+  animation: scrollNewsText 30s linear infinite 200ms;
 }
 @keyframes scrollNewsText {
   from {
-    transform: translateX(150%);
+    transform: translateX(120%);
   }
   to {
-    transform: translateX(-150%);
+    transform: translateX(-100%);
   }
 }
 
