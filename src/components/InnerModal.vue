@@ -15,7 +15,6 @@
 </template>
 <script setup>
   const props = defineProps(["id", "url"]);
-  import {  ref, defineEmits } from "vue";
 
 </script>
 <style>
