@@ -80,22 +80,27 @@ body {
   align-self: flex-end;
   /* margin: 2rem; */
 }
-.news {
+
+.news,
+.topNews{
   position: relative;
   display: flex;
+  font-family: "BISS", serif;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 1);
+  color: #005ca9;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.news{
   justify-content: center;
   align-items: center;
-  font-family: "BISS", serif;
-  font-weight: 600;
   font-size: 18px;
-  width: 100%;
   top: 50px;
   bottom: 0;
   height: 200px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 1);
   margin-bottom: 5rem;
-  color: #005ca9;
 
 }
 .text-container {
@@ -113,6 +118,25 @@ body {
     transform: translateY(-75%);
   }
 }
+.topNews{
+  top: 20px;
+  font-size: 25px;
+}
+.topNews-title{
+  position: relative;
+  z-index: 1;
+  transition: all 20ms ease;
+  animation: scrollNewsText 60s linear infinite 200ms;
+}
+@keyframes scrollNewsText {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(-150%);
+  }
+}
+
 @media only screen and (min-width: 2560px) {
   #biss-logo {
     height: 10vmin;

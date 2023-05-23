@@ -1,5 +1,13 @@
 <template>
-  <div class="news">
+  <div class="topNews">
+    <div class="topNews-title">
+      <p>
+        Datavraagstuk? Onze experts helpen je graag, loop binnen op vrijdagen
+        tussen 11 en 12 voor het data-spreekuur
+      </p>
+    </div>
+  </div>
+  <!-- <div class="news">
     <div class="text-container">
       <p>
         Wil jij weten hoe je data voor jouw organisatie kunt laten werken? Heb je een idee
@@ -33,5 +41,5 @@
         <li>Hoe? Loop binnen tussen 11:00 en 12:00 uur op vrijdagen</li>
       </ul>
     </div>
-  </div>
+  </div> -->
 </template>
